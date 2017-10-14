@@ -1,5 +1,5 @@
 node_modules/
 ./app/bundle.js
 ./app/bundle.js.map
-./app/keys.js
+app/keys.js
 **/**/__snapshots__/

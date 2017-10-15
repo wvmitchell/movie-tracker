@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import authenticationReducer from './components/Authentication/reducer'
+import loginReducer from './components/Login/reducer'
 
 const initialState = Object.assign({})
 const defaultReducer = (state = initialState, action) => {
@@ -12,6 +13,7 @@ const defaultReducer = (state = initialState, action) => {
 const rootReducer = combineReducers({
   defaultState: defaultReducer,
   authentication: authenticationReducer,
+  login: loginReducer,
 })
 
 export default rootReducer

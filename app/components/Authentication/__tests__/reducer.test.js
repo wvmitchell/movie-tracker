@@ -7,6 +7,7 @@
 import authenticationReducer from '../reducer'
 import {
   setIsAuthenticated,
+  attemptAuthentication,
 } from '../actions'
 
 describe('authenticationReducer', () => {
@@ -26,5 +27,12 @@ describe('authenticationReducer', () => {
       isAuthenticated: false
     })
     expect(authenticationReducer(undefined, setIsAuthenticated(false))).toEqual(expected)
+  })
+
+  it('authenticates the user', () => {
+    const expected = Object.assign({
+      isAuthenticated: false
+    })
+    expect(authenticationReducer(undefined, attemptAuthentication('someuser', 'somepass'))).toEqual(expected)
   })
 })

@@ -4,10 +4,11 @@ class MoviesApi {
     this.apiKey = apiKey
   }
 
-  fetchLatestMovies = () => {
-    fetch(`${this.rootAPI}movies/latest?api_key=${this.api_key}`)
+  fetchNowPlaying = () => (
+    fetch(`${this.rootAPI}movie/now_playing?api_key=${this.apiKey}`)
       .then(response => response.json())
-  }
+      .then(parsedResponse => parsedResponse.results)
+  )
 }
 
 export default MoviesApi

@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import MovieCard from '../movieCard'
+import MovieCard from './index'
 
 describe('MovieCard', () => {
   it('should match the snapshot', () => {

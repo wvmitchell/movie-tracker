@@ -58,6 +58,9 @@
     "setupFiles": [
       "raf/polyfill",
       "./config/setupTests.js"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>/testConfig/styleMock.js"
+    }
   }
 }
